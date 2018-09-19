@@ -34,6 +34,9 @@ def fuzzificador(elemento):
     return resposta
 
 def desfuzzificador_max(elemento,classes,pos):
+    """ Processo de escolha da classe
+    Metodo utilizado: Valor maximo"""
+
     classe = classes[0]
     valor_maximo =  elemento[classe][pos]
     for classe in classes:
@@ -43,15 +46,16 @@ def desfuzzificador_max(elemento,classes,pos):
             resp = classe
     return resp
 
-
-
 def fuzzy(X,ini,fim):
     resposta = {}
+    #fuzzyficando
     for classe in X.target_names:
         resposta[classe] = np.zeros((fim-ini))
         for e in range(ini,fim): # e = elemento
             resposta[classe][e] = fuzzificador(X.data[e])
+    ### Não sabemos as regras
     
+    # Desfuzzyficando
     resposta_final = []
     for e in range(ini,fim): # e = elemento
         resposta_final.append(desfuzzificador_max(resposta,X.target_names,e))
