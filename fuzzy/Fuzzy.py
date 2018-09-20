@@ -19,12 +19,6 @@ def p_gauss(x,info):
     sigma = info[1]
     return fuzz.membership.gaussmf(x,centro,sigma)
 
-def p_singleton(classe, classe_teste):
-    hash_t = {0: 'setosa',1:'versicolor',2:'virginica'}
-    if classe == hash_t[classe_teste]:
-        return 1
-    else:
-        return 0
 
 def fuzzificador(elemento):
     """ Função de fuzzificação
@@ -33,35 +27,40 @@ def fuzzificador(elemento):
     elemento = valor a ser fuzzificado"""
 
     info = {"sepal length (cm)": (5.84,0.8),"sepal width (cm)" : (3.05,0.43),"petal length (cm)": (3.76,1.76),"petal width (cm)" : (1.20,0.76)}
-    resposta = np.zeros(4)
+    resposta = 0
     for dim in range(0,4):
         dim_info = list(info.keys())[dim] 
-        resposta[dim] = p_gauss(elemento[dim],info[dim_info])/elemento[dim]
+        resposta += p_gauss(elemento[dim],info[dim_info])/elemento[dim]
     return resposta
 
 def desfuzzificador_max(elemento,classes,pos):
-    valor_maximo =  np.mean(elemento[list(classes)[0]][pos])
+    """ Processo de escolha da classe
+    Metodo utilizado: Valor maximo"""
+
+    classe = classes[0]
+    valor_maximo =  elemento[classe][pos]
     for classe in classes:
-        x = np.mean(elemento[classe][pos])
+        x = elemento[classe][pos]
         if (x >= valor_maximo):
             valor_maximo = x
             resp = classe
     return resp
 
-
-
 def fuzzy(X,ini,fim):
     resposta = {}
+    #fuzzyficando
     for classe in X.target_names:
-        resposta[classe] = np.zeros((fim-ini,4))
+        resposta[classe] = np.zeros((fim-ini))
         for e in range(ini,fim): # e = elemento
             resposta[classe][e] = fuzzificador(X.data[e])
+    ### Não sabemos as regras
     
+    # Desfuzzyficando
     resposta_final = []
     for e in range(ini,fim): # e = elemento
         resposta_final.append(desfuzzificador_max(resposta,X.target_names,e))
     return resposta,resposta_final
 
 data = load_iris()
-x,cc = fuzzy(data,0,10)
+x,cc = fuzzy(data,0,149)
 
