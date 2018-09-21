@@ -3,7 +3,7 @@ import itertools
 import numpy as np
 import matplotlib.pyplot as plt
 
-# Divis„o do datasets
+# Divis√£o do datasets
 from sklearn.model_selection import train_test_split
 
 # Base de dados

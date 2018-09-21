@@ -1,0 +1,33 @@
+digraph Tree {
+node [shape=box, style="filled, rounded", color="black", fontname=helvetica] ;
+edge [fontname=helvetica] ;
+0 [label=<petal width (cm) &le; 0.8<br/>gini = 0.665<br/>samples = 120<br/>value = [37, 39, 44]<br/>class = virginica>, fillcolor="#8139e510"] ;
+1 [label=<gini = 0.0<br/>samples = 37<br/>value = [37, 0, 0]<br/>class = setosa>, fillcolor="#e58139ff"] ;
+0 -> 1 [labeldistance=2.5, labelangle=45, headlabel="True"] ;
+2 [label=<petal width (cm) &le; 1.75<br/>gini = 0.498<br/>samples = 83<br/>value = [0, 39, 44]<br/>class = virginica>, fillcolor="#8139e51d"] ;
+0 -> 2 [labeldistance=2.5, labelangle=-45, headlabel="False"] ;
+3 [label=<petal length (cm) &le; 4.95<br/>gini = 0.206<br/>samples = 43<br/>value = [0, 38, 5]<br/>class = versicolor>, fillcolor="#39e581dd"] ;
+2 -> 3 ;
+4 [label=<petal width (cm) &le; 1.65<br/>gini = 0.051<br/>samples = 38<br/>value = [0, 37, 1]<br/>class = versicolor>, fillcolor="#39e581f8"] ;
+3 -> 4 ;
+5 [label=<gini = 0.0<br/>samples = 37<br/>value = [0, 37, 0]<br/>class = versicolor>, fillcolor="#39e581ff"] ;
+4 -> 5 ;
+6 [label=<gini = 0.0<br/>samples = 1<br/>value = [0, 0, 1]<br/>class = virginica>, fillcolor="#8139e5ff"] ;
+4 -> 6 ;
+7 [label=<petal width (cm) &le; 1.65<br/>gini = 0.32<br/>samples = 5<br/>value = [0, 1, 4]<br/>class = virginica>, fillcolor="#8139e5bf"] ;
+3 -> 7 ;
+8 [label=<gini = 0.0<br/>samples = 4<br/>value = [0, 0, 4]<br/>class = virginica>, fillcolor="#8139e5ff"] ;
+7 -> 8 ;
+9 [label=<gini = 0.0<br/>samples = 1<br/>value = [0, 1, 0]<br/>class = versicolor>, fillcolor="#39e581ff"] ;
+7 -> 9 ;
+10 [label=<petal length (cm) &le; 4.85<br/>gini = 0.049<br/>samples = 40<br/>value = [0, 1, 39]<br/>class = virginica>, fillcolor="#8139e5f8"] ;
+2 -> 10 ;
+11 [label=<sepal length (cm) &le; 5.95<br/>gini = 0.444<br/>samples = 3<br/>value = [0, 1, 2]<br/>class = virginica>, fillcolor="#8139e57f"] ;
+10 -> 11 ;
+12 [label=<gini = 0.0<br/>samples = 1<br/>value = [0, 1, 0]<br/>class = versicolor>, fillcolor="#39e581ff"] ;
+11 -> 12 ;
+13 [label=<gini = 0.0<br/>samples = 2<br/>value = [0, 0, 2]<br/>class = virginica>, fillcolor="#8139e5ff"] ;
+11 -> 13 ;
+14 [label=<gini = 0.0<br/>samples = 37<br/>value = [0, 0, 37]<br/>class = virginica>, fillcolor="#8139e5ff"] ;
+10 -> 14 ;
+}
