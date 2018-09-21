@@ -2,21 +2,20 @@
 import itertools
 import numpy as np
 import matplotlib.pyplot as plt
-
 # Divisão do datasets
 from sklearn.model_selection import train_test_split
-
 # Base de dados
 from sklearn.datasets import load_iris
-
 # Arvores de decisao
 from sklearn import tree
 import graphviz
-
-# MAtriz de Confusao
+# Matriz de Confusao
 from sklearn.metrics import confusion_matrix
 
-def plot_tree(clf):
+def plot_tree(clf,iris):
+    """
+    Essa função imprime a Árvore de decisão.
+    """
     dot_data = tree.export_graphviz(clf, out_file=None) 
     graph = graphviz.Source(dot_data) 
     graph.render("iris") 
@@ -25,18 +24,13 @@ def plot_tree(clf):
     graph = graphviz.Source(dot_data)  
     return graph 
 
-def plot_confusion_matrix(cm, classes, normalize=False, title='Confusion matrix',cmap=plt.cm.Blues):
+def plot_confusion_matrix(cm, classes, normalize=False, title='Matriz de Confusão',cmap=plt.cm.Blues):
     """
-    This function prints and plots the confusion matrix.
-    Normalization can be applied by setting `normalize=True`.
+    Essa função imprime a matriz de confusão
+    A matriz pode ser nomarlizada atraves de `normalize=True`.
     """
     if normalize:
         cm = cm.astype('float') / cm.sum(axis=1)[:, np.newaxis]
-        print("Normalized confusion matrix")
-    else:
-        print('Confusion matrix, without normalization')
-
-    print(cm)
 
     plt.imshow(cm, interpolation='nearest', cmap=cmap)
     plt.title(title)
@@ -51,31 +45,40 @@ def plot_confusion_matrix(cm, classes, normalize=False, title='Confusion matrix'
         plt.text(j, i, format(cm[i, j], fmt),
                  horizontalalignment="center",
                  color="white" if cm[i, j] > thresh else "black")
-
+                 
     plt.tight_layout()
-    plt.ylabel('True label')
-    plt.xlabel('Predicted label')
+    plt.ylabel('Classe Verdadeira')
+    plt.xlabel('Classe Obtida')
 
+def MatrizConfusao(y_test, y_pred,class_names):
+        # Matriz de confusao
+        cnf_matrix = confusion_matrix(y_test, y_pred)
+        np.set_printoptions(precision=2)
+        # Plot non-normalized confusion matrix
+        plt.figure()
+        plot_confusion_matrix(cnf_matrix, classes=class_names,title='Matriz de confusão não normalizada')
+        # Plot normalized confusion matrix
+        plt.figure()
+        plot_confusion_matrix(cnf_matrix, classes=class_names, normalize=True, title='Matriz de confusão normalizada')
+        plt.show()
 
-iris = load_iris()
-class_names = iris.target_names
+def DecisionTree(iris):
+    """
+    Essa função gera a Árvore de Decisão e realiza os testes
+    """
+    # Realizando a construção da arvore de decisão e classificando
+    X_train, X_test, y_train, y_test = train_test_split(iris.data, iris.target, test_size=0.20, train_size = 0.80, random_state=80)
+    clf = tree.DecisionTreeClassifier()
+    clf = clf.fit(X_train, y_train)
+    y_pred = clf.predict(X_test)
+    return clf, y_test,y_pred,clf.score(X_test,y_test)
 
-X_train, X_test, y_train, y_test = train_test_split(iris.data, iris.target, test_size=0.20, train_size = 0.80, random_state=80)
-clf = tree.DecisionTreeClassifier()
-clf = clf.fit(X_train, y_train)
-y_pred = clf.predict(X_test);
+def main():
+    iris = load_iris()
+    class_names = iris.target_names
+    clf,y_test,y_pred,score = DecisionTree(iris)
+    print('Score: %f' %score)
+    MatrizConfusao(y_test, y_pred,class_names)
+    plot_tree(clf,iris)
 
-
-# Compute confusion matrix
-cnf_matrix = confusion_matrix(y_test, y_pred)
-np.set_printoptions(precision=2)
-
-# Plot non-normalized confusion matrix
-plt.figure()
-plot_confusion_matrix(cnf_matrix, classes=class_names,title='Confusion matrix, without normalization')
-
-# Plot normalized confusion matrix
-plt.figure()
-plot_confusion_matrix(cnf_matrix, classes=class_names, normalize=True, title='Normalized confusion matrix')
-
-plt.show()
+main()

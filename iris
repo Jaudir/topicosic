@@ -1,6 +1,6 @@
 digraph Tree {
 node [shape=box] ;
-0 [label="X[3] <= 0.8\ngini = 0.665\nsamples = 120\nvalue = [37, 39, 44]"] ;
+0 [label="X[2] <= 2.45\ngini = 0.665\nsamples = 120\nvalue = [37, 39, 44]"] ;
 1 [label="gini = 0.0\nsamples = 37\nvalue = [37, 0, 0]"] ;
 0 -> 1 [labeldistance=2.5, labelangle=45, headlabel="True"] ;
 2 [label="X[3] <= 1.75\ngini = 0.498\nsamples = 83\nvalue = [0, 39, 44]"] ;
