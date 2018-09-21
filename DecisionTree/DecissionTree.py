@@ -79,6 +79,7 @@ def main():
     clf,y_test,y_pred,score = DecisionTree(iris)
     print('Score: %f' %score)
     MatrizConfusao(y_test, y_pred,class_names)
-    plot_tree(clf,iris)
+    g = plot_tree(clf,iris)
+    g.view()
 
 main()
