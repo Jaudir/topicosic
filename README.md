@@ -8,4 +8,4 @@ Professora: @Lucinaa
 - [ ] Fuzzy
 - [ ] Projeto Final
 
-![Cat](https://octodex.github.com/images/yaktocat.png)
+![Cat](https://static.zerochan.net/Sadaharu.full.1091914.jpg)
