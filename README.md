@@ -5,7 +5,8 @@ Equipe: @Jaudir, @Thouma, @MatheusAguiar
 
 Professora: @Lucinaa
 - [x] Árvore de decisão
-- [ ] Fuzzy
+- [x] Algoritmo Genetico
+- [ ] Regressão
 - [ ] Projeto Final
 
 ![Cat](https://static.zerochan.net/Sadaharu.full.1091914.jpg)
