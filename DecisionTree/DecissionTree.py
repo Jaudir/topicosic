@@ -63,11 +63,8 @@ def MatrizConfusao(y_test, y_pred,class_names):
         plt.show()
 
 def DecisionTree(iris):
-    """
-    Essa função gera a Árvore de Decisão e realiza os testes
-    """
-    # Realizando a construção da arvore de decisão e classificando
-    X_train, X_test, y_train, y_test = train_test_split(iris.data, iris.target, test_size=0.20, train_size = 0.80, random_state=80)
+    X_train, X_test, y_train, y_test = train_test_split(iris.data, iris.target,test_size=0.20,train_size = 0.80, random_state=80)
+
     clf = tree.DecisionTreeClassifier()
     clf = clf.fit(X_train, y_train)
     y_pred = clf.predict(X_test)
