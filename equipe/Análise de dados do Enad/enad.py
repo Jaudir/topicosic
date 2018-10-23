@@ -1,7 +1,10 @@
 import pandas
 import matplotlib.pyplot as plt
 
-enade2017=pandas.read_csv("MICRODADOS_ENADE_2017.txt", sep=';',dtype={"DS_VT_ESC_OFG": str, 
+#dados obtidos em: http://portal.inep.gov.br/web/guest/microdados
+#dados referentes ao ENAD 2017
+
+enade2017=pandas.read_csv("Enade.txt" sep=';',dtype={"DS_VT_ESC_OFG": str, 
                                                                                'DS_VT_ESC_OCE':str,
                                                                               'DS_VT_ACE_OCE':str,
                                                                               'NT_GER':str,
@@ -12,8 +15,10 @@ enade2017=pandas.read_csv("MICRODADOS_ENADE_2017.txt", sep=';',dtype={"DS_VT_ESC
                                                                               'NT_OBJ_CE':str,
                                                                               'NT_DIS_CE':str})
 enade2017.columns[0:10]
+#CO_UF_CURSO -> Código da UF de funcionamento do curso 31 = MG
+#TP_SEXO -> tipo do sexo: M - Masculino, F - Feminino
 
-tabela = pandas.DataFrame(enade2017, columns=['NT_GER', 'CO_GRUPO', 'QE_I08', 'CO_IES', 'QE_I05'])
+tabela = pandas.DataFrame(enade2017, columns=['NT_GER', 'CO_GRUPO', 'QE_I08', 'CO_IES', 'CO_UF_CURSO', 'TP_SEXO'])
 print(tabela.head(10))
 
 ##limpeza dos dados
@@ -42,61 +47,61 @@ print(tabela['NT_GER'].mean())
 
 print(tabela['NT_GER'].describe())
 
+#alunos com notas maiores que 60
+alunos_exemplares = tabela.loc[tabela['NT_GER'] > 60]
+print(alunos_exemplares)
 
-print(tabela.loc[tabela['NT_GER'] > 96])
-
-
-
-#outros comandos
-print('indice da primeira maior nota: ', tabela['NT_GER'].idxmax())
-print('Maior nota: ', tabela['NT_GER'][72257])
-#print(tabela['NT_GER'].idxmax())
-
-#Calcula a média de um curso especifico
-#Código da área de enquadramento do curso no Enade == ciencia da computacao
-
-ccomp = tabela[tabela['CO_GRUPO']==4004]
-
+ccomp = alunos_exemplares[alunos_exemplares['CO_GRUPO']==4004]
+#mostra todos os alunos de ciência da computação com nota maior que 60
 print(ccomp)
 
-#do curso do IFNMG
+# seleciona alunos Minas Gerais
+ufccomp = ccomp[ccomp['CO_UF_CURSO']==31]
+ufccomp.describe()
+
+print(ufccomp)
+
+#dos alunos do IFNMG
 ifccomp = ccomp[ccomp['CO_IES']==3188]
 ifccomp.describe()
+print(ifccomp)
+
+#dos alunos do IFNMG do sexo F
+ifFccomp = ifccomp[ifccomp['TP_SEXO']=='F']
+ifFccomp.describe()
+print(ifFccomp)
 
 #somente as notas de quem respondeu a questão sobre a renda
-ccomp=ccomp.loc[(ccomp['QE_I08'].notnull())]
-ccomp.NT_GER.describe()
+ifFccomp=ifFccomp.loc[(ifFccomp['QE_I08'].notnull())]
+ifFccomp.NT_GER.describe()
 
-ccomp=ccomp.loc[(ccomp['QE_I05'].notnull())]
-ccomp.NT_GER.describe()
-
-ccomp.QE_I08.head(10)
-
-ccomp['QE_I08'] = ccomp['QE_I08'].map({'A': 1, 'B': 2, 'C': 3, 'D': 4,'E': 5, 'F':6,'G':7})
-
-ccomp.QE_I08.head(10)
+ifFccomp.QE_I08.head(10)
+ifFccomp['QE_I08'] = ifFccomp['QE_I08'].map({'A': 1, 'B': 2, 'C': 3, 'D': 4,'E': 5, 'F':6,'G':7})
+ifFccomp.QE_I08.head(10)
 
 
-import matplotlib.pyplot as plt
 #visualmente
-plt.scatter( ccomp.NT_GER, ccomp.QE_I08)
+plt.scatter( ifFccomp.NT_GER, ifFccomp.QE_I08)
 plt.ylabel('Faixa de renda')
 plt.xlabel('Nota do curso de C. da Comp.')
 plt.show()
 
+#dos alunos do IFNMG do sexo M
+ifMccomp = ifccomp[ifccomp['TP_SEXO']=='M']
+ifMccomp.describe()
+print(ifMccomp)
 
-ccomp.QE_I05 = ccomp['QE_I05'].map({'A': 1, 'B': 2, 'C': 3, 'D': 4,'E': 5, 'F':6})
+#somente as notas de quem respondeu a questão sobre a renda
+ifMccomp=ifMccomp.loc[(ifMccomp['QE_I08'].notnull())]
+ifMccomp.NT_GER.describe()
 
-ccomp.QE_I05.head(10)
-
+ifMccomp.QE_I08.head(10)
+ifMccomp['QE_I08'] = ifMccomp['QE_I08'].map({'A': 1, 'B': 2, 'C': 3, 'D': 4,'E': 5, 'F':6,'G':7})
+ifMccomp.QE_I08.head(10)
 
 
 #visualmente
-plt.scatter( ccomp.NT_GER, ccomp.QE_I05)
-plt.ylabel('Escolaridade da mãe')
+plt.scatter( ifMccomp.NT_GER, ifMccomp.QE_I08)
+plt.ylabel('Faixa de renda')
 plt.xlabel('Nota do curso de C. da Comp.')
 plt.show()
-
-
-escolaridade = ccomp.loc[ccomp.QE_I05 ==1]
-escolaridade.NT_GER.describe()
