@@ -1,10 +1,11 @@
 import pandas
 import matplotlib.pyplot as plt
+import scipy.stats as stats
 
 #dados obtidos em: http://portal.inep.gov.br/web/guest/microdados
 #dados referentes ao ENAD 2017
-
-enade2017=pandas.read_csv("Enade.txt" sep=';',dtype={"DS_VT_ESC_OFG": str, 
+jaudir = 'C:\\Users\\jonas\\Desktop\\Enad\\Enad.txt'
+enade2017=pandas.read_csv(jaudir, sep=';',dtype={"DS_VT_ESC_OFG": str,  "DS_VT_ESC_OFG": str, 
                                                                                'DS_VT_ESC_OCE':str,
                                                                               'DS_VT_ACE_OCE':str,
                                                                               'NT_GER':str,
@@ -18,8 +19,7 @@ enade2017.columns[0:10]
 #CO_UF_CURSO -> Código da UF de funcionamento do curso 31 = MG
 #TP_SEXO -> tipo do sexo: M - Masculino, F - Feminino
 
-tabela = pandas.DataFrame(enade2017, columns=['NT_GER', 'CO_GRUPO', 'QE_I08', 'CO_IES', 'CO_UF_CURSO', 'TP_SEXO'])
-print(tabela.head(10))
+tabela = pandas.DataFrame(enade2017, columns=['NT_GER', 'CO_GRUPO', 'CO_IES', 'CO_UF_CURSO', 'TP_SEXO', 'ANO_IN_GRAD'])
 
 ##limpeza dos dados
 
@@ -43,22 +43,19 @@ tabela['NT_GER'] = pandas.to_numeric(tabela['NT_GER'])
 print(tabela['NT_GER'])
 print(tabela['NT_GER'].mean())
 
-
-
 print(tabela['NT_GER'].describe())
 
-#alunos com notas maiores que 60
-alunos_exemplares = tabela.loc[tabela['NT_GER'] > 60]
+#alunos com notas menores que 100
+alunos_exemplares = tabela.loc[tabela['NT_GER']<100]
 print(alunos_exemplares)
 
+#seleciona apenas os alunos de computação
 ccomp = alunos_exemplares[alunos_exemplares['CO_GRUPO']==4004]
-#mostra todos os alunos de ciência da computação com nota maior que 60
 print(ccomp)
 
 # seleciona alunos Minas Gerais
 ufccomp = ccomp[ccomp['CO_UF_CURSO']==31]
 ufccomp.describe()
-
 print(ufccomp)
 
 #dos alunos do IFNMG
@@ -71,37 +68,43 @@ ifFccomp = ifccomp[ifccomp['TP_SEXO']=='F']
 ifFccomp.describe()
 print(ifFccomp)
 
-#somente as notas de quem respondeu a questão sobre a renda
-ifFccomp=ifFccomp.loc[(ifFccomp['QE_I08'].notnull())]
-ifFccomp.NT_GER.describe()
-
-ifFccomp.QE_I08.head(10)
-ifFccomp['QE_I08'] = ifFccomp['QE_I08'].map({'A': 1, 'B': 2, 'C': 3, 'D': 4,'E': 5, 'F':6,'G':7})
-ifFccomp.QE_I08.head(10)
-
-
-#visualmente
-plt.scatter( ifFccomp.NT_GER, ifFccomp.QE_I08)
-plt.ylabel('Faixa de renda')
-plt.xlabel('Nota do curso de C. da Comp.')
-plt.show()
-
 #dos alunos do IFNMG do sexo M
 ifMccomp = ifccomp[ifccomp['TP_SEXO']=='M']
 ifMccomp.describe()
 print(ifMccomp)
 
-#somente as notas de quem respondeu a questão sobre a renda
-ifMccomp=ifMccomp.loc[(ifMccomp['QE_I08'].notnull())]
-ifMccomp.NT_GER.describe()
 
-ifMccomp.QE_I08.head(10)
-ifMccomp['QE_I08'] = ifMccomp['QE_I08'].map({'A': 1, 'B': 2, 'C': 3, 'D': 4,'E': 5, 'F':6,'G':7})
-ifMccomp.QE_I08.head(10)
+print(ifccomp)
+
+#somente as notas de quem respondeu a questão sobre a renda
+ufccomp=ufccomp.loc[(ufccomp['TP_SEXO'].notnull())]
+ufccomp.NT_GER.describe()
+
+ufccomp.TP_SEXO.head(10)
+ufccomp['TP_SEXO'] = ufccomp['TP_SEXO'].map({'F': 1, 'M': 2})
+ufccomp.TP_SEXO.head(10)
 
 
 #visualmente
-plt.scatter( ifMccomp.NT_GER, ifMccomp.QE_I08)
-plt.ylabel('Faixa de renda')
+plt.scatter( ufccomp.NT_GER, ufccomp.TP_SEXO)
+plt.ylabel('Sexo')
 plt.xlabel('Nota do curso de C. da Comp.')
 plt.show()
+
+
+#Como verificar se a média dos alunos referente a cada sexo é realmente diferentes
+sexo = pandas.DataFrame(ccomp, columns=['NT_GER', 'TP_SEXO'])
+sexo.boxplot(by='TP_SEXO')
+
+#referente apenas de Minas Gerais
+sexo = pandas.DataFrame(ufccomp, columns=['NT_GER', 'TP_SEXO'])
+sexo.boxplot(by='TP_SEXO')
+
+
+#nota geral agrupada pelo sexo
+tabela['NT_GER'].groupby(tabela['TP_SEXO']).describe()
+
+print(stats.shapiro(sexo.NT_GER.loc[ufccomp.TP_SEXO ==1]))
+print(stats.shapiro(sexo.NT_GER.loc[ufccomp.TP_SEXO ==2]))
+
+sexo.NT_GER.loc[sexo.TP_SEXO ==2].hist()
