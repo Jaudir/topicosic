@@ -2,6 +2,7 @@ import pandas
 import matplotlib.pyplot as plt
 import scipy.stats as stats
 
+
 #dados obtidos em: http://portal.inep.gov.br/web/guest/microdados
 #dados referentes ao ENAD 2017
 jaudir = 'C:\\Users\\jonas\\Desktop\\Enad\\Enad.txt'
@@ -43,11 +44,19 @@ tabela['NT_GER'] = pandas.to_numeric(tabela['NT_GER'])
 print(tabela['NT_GER'])
 print(tabela['NT_GER'].mean())
 
+
+
 print(tabela['NT_GER'].describe())
 
-#alunos com notas menores que 100
-alunos_exemplares = tabela.loc[tabela['NT_GER']<100]
+#alunos com notas maiores que 60
+alunos_exemplares = tabela.loc[tabela['NT_GER']>60]
 print(alunos_exemplares)
+
+
+#alunos com notas menores que 100
+#alunos_exemplares = tabela.loc[tabela['NT_GER']<100]
+#print(alunos_exemplares)
+
 
 #seleciona apenas os alunos de computação
 ccomp = alunos_exemplares[alunos_exemplares['CO_GRUPO']==4004]
@@ -102,9 +111,38 @@ sexo.boxplot(by='TP_SEXO')
 
 
 #nota geral agrupada pelo sexo
-tabela['NT_GER'].groupby(tabela['TP_SEXO']).describe()
+print(tabela['NT_GER'].groupby(tabela['TP_SEXO']).describe())
+
 
 print(stats.shapiro(sexo.NT_GER.loc[ufccomp.TP_SEXO ==1]))
 print(stats.shapiro(sexo.NT_GER.loc[ufccomp.TP_SEXO ==2]))
 
 sexo.NT_GER.loc[sexo.TP_SEXO ==2].hist()
+
+# teste não paramétrico são métodos que não assumem uma distribuição específica para os dados.
+stat, p = stats.mannwhitneyu(sexo.NT_GER.loc[sexo.TP_SEXO ==1], sexo.NT_GER.loc[sexo.TP_SEXO ==2])
+
+print('Mann-Whitney: Estatisticas=%.3f, p=%.3f' % (stat, p))
+
+alpha = 0.05
+if p > alpha:
+	print('Mesma distribuição')
+else:
+	print('Distribução diferente')
+    
+    
+stat, p = stats.kruskal(sexo.NT_GER.loc[sexo.TP_SEXO ==1], sexo.NT_GER.loc[sexo.TP_SEXO ==2])
+print('Kruskal-Wallis: Estatisticas=%.3f, p=%.3f' % (stat, p))
+
+if p > alpha:
+	print('Mesma distribuição')
+else:
+	print('Distribução diferente')
+    
+#anova
+stat, p = stats.f_oneway(sexo.NT_GER.loc[sexo.TP_SEXO ==1], sexo.NT_GER.loc[sexo.TP_SEXO ==2])
+print('Anova: Estatisticas=%.3f, p=%.3f' % (stat, p))
+if p > alpha:
+	print('Mesma distribuição')
+else:
+	print('Distribução diferente')
