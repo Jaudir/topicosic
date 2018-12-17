@@ -3,10 +3,10 @@
 
 Equipe: @Jaudir, @Thouma, @MatheusAguiar
 
-Professora: @Lucinaa
+Professora: @Lucianaa
 - [x] Árvore de decisão
 - [x] Algoritmo Genetico
-- [ ] Regressão
+- [x] Regressão
 - [ ] Projeto Final
 
 ![Cat](https://static.zerochan.net/Sadaharu.full.1091914.jpg)
