@@ -1,0 +1,258 @@
+Curso,Idade,Ano_Ingresso,Sexo,Cor/raça,Renda_Familiar,Recebe_Auxilio,Tipo_Auxilio
+Ciência da Computação,,,M,Pardo,3 a 6,N,
+Ciência da Computação,,,F,Pardo,3 a 6,N, Pronto Jaudir
+Ciência da Computação,,,M,Branco,mais de 9,N,
+Ciência da Computação,,,M,Pardo,1,S,
+Ciência da Computação,,,M,Branco,1 a 3,S,
+Ciência da Computação,,,F,Pardo,1 a 3,S,
+Ciência da Computação,,,F,Pardo,mais de 9,N,
+Ciência da Computação,,,M,Preto,3 a 6,S,
+Ciência da Computação,,,M,Pardo,6 a 9,N,
+Ciência da Computação,,,M,Branco,3 a 6,N,
+Ciência da Computação,,,M,Pardo,1 a 3,S,
+Ciência da Computação,,,F,Pardo,1 a 3,S,
+Ciência da Computação,,,F,Branco,mais de 9,S,
+Ciência da Computação,,,M,Pardo,3 a 6,S,
+Ciência da Computação,,,M,Branco,3 a 6,N,
+Ciência da Computação,,,F,Pardo,3 a 6,S,
+Ciência da Computação,,,M,Pardo,1 a 3,S,
+Ciência da Computação,,,M,Branco,1 a 3,S,
+Ciência da Computação,,,F,Branco,1 a 3,S,
+Ciência da Computação,,,F,Pardo,3 a 6,S,
+Ciência da Computação,,,M,Pardo,3 a 6,N,
+Ciência da Computação,,,F,Pardo,1,S,
+Ciência da Computação,,,M,Pardo,1,S,
+Ciência da Computação,,,M,Branco,3 a 6,N,
+Ciência da Computação,,,M,Branco,3 a 6,S,
+Ciência da Computação,,,M,Pardo,mais de 9,N,
+Ciência da Computação,,,F,Preto,1 a 3,N,
+Ciência da Computação,,,M,Branco,1 a 3,N,
+Ciência da Computação,,,F,Pardo,1 a 3,S,
+Ciência da Computação,,,M,Preto,1 a 3,S,
+Ciência da Computação,,,F,Pardo,1 a 3,N,
+Ciência da Computação,,,M,Pardo,3 a 6,N,
+Ciência da Computação,,,F,Preto,1 a 3,S,
+Ciência da Computação,,,M,Branco,1 a 3,N,
+Técnico em Eletrotécnica,,,M,Preto,1 a 3,S,
+Técnico em Eletrotécnica,,,M,Pardo,1 a 3,N,
+Técnico em Eletrotécnica,,,M,Pardo,1,N,
+Técnico em Eletrotécnica,,,M,Pardo,1 a 3,N,
+Técnico em Eletrotécnica,,,M,Preto,1 a 3,N,
+Técnico em Eletrotécnica,,,M,Pardo,3 a 6,N,
+Técnico em Eletrotécnica,,,M,Branco,1 a 3,N,
+Técnico em Eletrotécnica,,,M,Pardo,1 a 3,N,
+Técnico em Eletrotécnica,,,M,Pardo,1 a 3,S,
+Técnico em Eletrotécnica,,,M,Preto,1 a 3,N,
+Técnico em Eletrotécnica,,,M,Branco,1 a 3,S,
+Técnico em Eletrotécnica,,,M,Pardo,1 a 3,S,
+Técnico em Eletrotécnica,,,F,Branco,1,N,
+Técnico em Eletrotécnica,,,M,Branco,1 a 3,N,
+Técnico em Eletrotécnica,,,M,Preto,1 a 3,N,
+Técnico em Segurança do Trabalho,,,F,Pardo,1 a 3,N,
+Técnico em Segurança do Trabalho,,,F,Pardo,1,S,
+Técnico em Segurança do Trabalho,,,F,Branco,1,S,
+Técnico em Segurança do Trabalho,,,M,Pardo,1,N,
+Técnico em Segurança do Trabalho,,,F,Pardo,1,N,
+Técnico em Segurança do Trabalho,,,F,Pardo,1,S,
+Técnico em Segurança do Trabalho,,,F,Branco,1 a 3,S,
+Técnico em Segurança do Trabalho,,,F,Pardo,1,N,
+Técnico em Segurança do Trabalho,,,M,Pardo,1 a 3,S,
+Técnico em Segurança do Trabalho,,,M,Branco,1 a 3,S,
+Técnico em Segurança do Trabalho,,,M,Branco,1 a 3,S,
+Técnico em Segurança do Trabalho,,,F,Branco,1,S,
+Técnico em Segurança do Trabalho,,,F,Branco,1,S,
+Técnico em Segurança do Trabalho,,,F,Pardo,1,S,
+Técnico em Segurança do Trabalho,,,F,Branco,1 a 3,N,
+Técnico em Segurança do Trabalho,,,F,Branco,1,N,
+Técnico em Segurança do Trabalho,,,F,Preto,1,S,
+Técnico em Segurança do Trabalho,,,F,Preto,1,S,
+Técnico em Segurança do Trabalho,,,F,Preto,1,S,
+Técnico em Segurança do Trabalho,,,F,Preto,1,S,
+Técnico em Química,16,2018,F,Preto,1 a 3,N,
+Técnico em Química,15,,F,Preto,3 a 6,N,
+Técnico em Química,,2018,M,Pardo,3 a 6,N,
+Técnico em Química,16,,F,Branco,1 a 3,N,
+Técnico em Química,16,,F,Pardo,6 a 9,N,
+Técnico em Segurança do Trabalho,24,,F,Pardo,1 a 3,S,AE
+Técnico em Química,,,M,Branco,6 a 9,N,
+Técnico em Química,15,,F,Pardo,3 a 6,S,AE
+Técnico em Química,15,,F,Pardo,1 a 3,S,AE
+Técnico em Química,16,,F,Pardo,1 a 3,S,AE
+Técnico em Química,,,M,Pardo,mais de 9,N,
+Técnico em Química,15,2018,F,Branco,3 a 6,N,
+Técnico em Química,15,,F,Amarelo,3 a 6,N,
+Técnico em Química,15,,F,Amarelo,3 a 6,N,
+Técnico em Química,,,M,Pardo,mais de 9,N,
+Técnico em Química,15,2018,F,Pardo,6 a 9,N,
+Técnico em Química,15,,F,Pardo,1 a 3,S,AE
+Técnico em Química,16,2018,F,Branco,3 a 6,S,AE
+Técnico em Química,,,M,Preto,3 a 6,N,
+Técnico em Química,15,2018,F,Branco,6 a 9,N,
+Técnico em Química,15,,F,Pardo,1 a 3,S,AE
+Técnico em Química,16,,M,Pardo,3 a 6,N,
+Técnico em Química,,,F,Pardo,3 a 6,N,
+Técnico em Química,16,2018,M,Branco,1 a 3,N,
+Técnico em Química,17,,F,Branco,-,,
+,16,,M,Branco,3 a 6,S,AE
+,,,M,Pardo,1,S,AE
+,,,M,Preto,1 a 3,N,
+,,2018,M,Branco,3 a 6,S,AE
+,,2017,M,Branco,1 a 3,S,AE-E
+Técnico em Edificações,18,,M,Pardo,1,N,
+Técnico em Edificações,20,,M,Pardo,3 a 6,N,
+Técnico em Informática,,,F,Branco,1 a 3,N,
+Técnico em Informática,,,F,Preto,1 a 3,S,AE
+Técnioco em Informática,15,2018,M,Branco,1 a 3,S,AE
+Técnioco em Informática,,2018,M,Pardo,3 a 6,S,AE
+Técnioco em Informática,15,2018,M,Branco,1 a 3,N,
+Técnioco em Informática,15,2018,M,Branco,1 a 3,N,
+Técnico em Edificações,28,2018,M,Pardo,1 a 3,N,
+Técnico em Edificações,,,F,Pardo,1 a 3,N,
+Técnico em Edificações,,,M,Pardo,1,N,
+Técnico em Edificações,29,,F,Pardo,1,N,
+Técnico em Edificações,37,,M,Branco,1 a 3,N,
+Técnico em Edificações,17,,M,Preto,1,N,
+Técnico em Edificações,36,,M,Preto,1 a 3,N,
+Técnico em Edificações,22,,F,Pardo,3 a 6,N,
+Técnico em Edificações,16,,M,Pardo,1 a 3,N,
+Técnico em Edificações,16,2018,M,Pardo,1,N,
+Técnico em Edificações,,,F,Indígena,1 a 3,N,
+Técnico em Edificações,21,2018,F,Pardo,1,N,
+Técnico em Edificações,21,2018,M,Branco,1,N,
+Técnico em Edificações,21,,M,Pardo,1,N,
+Técnico em Edificações,22,,M,Amarelo,1,N,
+Técnico em Edificações,,,F,Pardo,1,N,
+Técnico em Edificações,17,2018,M,Amarelo,1 a 3,N,
+Técnico em Edificações,,2018,M,Pardo,1 a 3,N,
+Técnico em Edificações,,,F,Pardo,3 a 6,N,
+Técnico em Edificações,,2018,M,Pardo,1,N,
+Técnico em Edificações,18,,F,Pardo,3 a 6,N,
+Técnico em Edificações,,2018,F,Pardo,1,N,
+Técnico em Edificações,20,2018,F,Preto,1,N,
+Técnico em Edificações,21,,M,Preto,1 a 3,N,
+Técnico em Edificações,22,,M,Pardo,1 a 3,N,
+Técnico em Edificações,18,,M,Preto,1 a 3,N,
+Técnico em Edificações,,,F,Pardo,1,N,
+Técnico em Edificações,16,,M,Pardo,1 a 3,N,
+Técnico em Edificações,36,2018,M,Preto,3 a 6,N,
+Técnico em Edificações,,,M,Branco,1 a 3,N,
+Técnico em Edificações,,,M,Pardo,1 a 3,N,
+Técnico em Informática,15,,M,Pardo,3 a 6,N,
+Ciência da Computação,23,2013,M,Pardo,1 a 3,N,
+Ciência da Computação,26,2016,F,Preto,1 a 3,S,AE
+Ciência da Computação,21,2014,M,Branco,1 a 3,S,PP
+Ciência da Computação,26,2013,M,Preto,1 a 3,N,
+Ciência da Computação,22,2015,M,Branco,1 a 3,S,AE
+Ciência da Computação,19,2017,M,Pardo,6 a 9,S,PE
+Engenharia Química,20,2018,F,Pardo,1,S,AE
+Ciência da Computação,23,2015,M,Pardo,3 a 6,N,
+Ciência da Computação,,2018,M,Pardo,1 a 3,S,AE
+Ciência da Computação,,2018,M,Branco,3 a 6,N,
+Ciência da Computação,,,M,Pardo,1 a 3,N,
+Técnico em Informática,17,2017,F,Preto,1 a 3,S,AE
+Técnico em Informática,16,,M,Pardo,3 a 6,N,
+Técnico em Informática,16,,M,Pardo,1 a 3,S,AE
+Técnico em Informática,17,,M,Pardo,1,S,AE
+Técnico em Informática,16,2017,F,Branco,1 a 3,S,AE
+Técnico em Informática,17,2017,M,Pardo,1 a 3,N,
+Técnico em Informática,16,2017,F,Pardo,6 a 9,N,
+Técnico em Informática,16,,M,Pardo,1,S,
+Engenharia Química,27,2016,F,Pardo,1,S,AE
+Engenharia Química,26,2016,F,Branco,mais de 9,S,PP
+Engenharia Química,20,2016,M,Pardo,1 a 3,N,
+Engenharia Química,20,2016,F,Branco,3 a 6,N,
+Ciência da Computação,24,2018,M,Pardo,1,S,AE
+Engenharia Química,22,2015,M,Branco,1,S,ES
+Ciência da Computação,20,2018,F,Pardo,1 a 3,N,
+Engenharia Química,20,2017,M,Branco,3 a 6,N,
+Engenharia Elétrica,20,2018,M,Preto,1,N,
+Engenharia Elétrica,19,2018,M,Pardo,3 a 6,N,
+Engenharia Elétrica,22,2018,M,Pardo,1 a 3,S,AE
+Engenharia Elétrica,20,2018,F,Pardo,1 a 3,S,AE
+Engenharia Elétrica,18,2018,M,Pardo,3 a 6,S,AE
+Engenharia Elétrica,18,2018,M,Branco,1 a 3,N,
+Engenharia Química,21,2015,F,Pardo,3 a 6,N,
+Engenharia Química,20,2016,M,Branco,1 a 3,S,AE
+Técnico em Informática,16,,M,Pardo,3 a 6,N,
+Técnico em Informática,15,,M,Branco,1 a 3,S,AE
+Técnico em Informática,15,,M,Pardo,3 a 6,S,AE
+Técnico em Informática,16,,F,Pardo,3 a 6,S,AE
+Técnico em Informática,15,2018,F,Preto,1 a 3,S,AE
+Técnico em Informática,15,2018,F,Pardo,1 a 3,S,AE
+Técnico em Informática,,2018,,Preto,1 a 3,S,AE
+Técnico em Informática,,2018,F,Pardo,1 a 3,N,
+Técnico em Informática,,,M,Indígena,3 a 6,N,
+Técnico em Informática,,,F,Pardo,3 a 6,N,
+Técnico em Informática,,,F,Pardo,1 a 3,S,AE
+Técnico em Informática,,2018,F,Preto,6 a 9,N,
+Técnico em Informática,16,,F,Branco,1 a 3,S,AE
+Técnico em Informática,16,,F,Branco,1 a 3,S,AE
+Técnico em Informática,16,2018,M,Pardo,3 a 6,N,
+Técnico em Informática,,,M,Pardo,3 a 6,N,
+Técnico em Informática,16,,M,Pardo,1 a 3,N,
+Técnico em Informática,16,,M,Pardo,3 a 6,N,
+Técnico em Eletrotécnica,,,M,Pardo,6 a 9,N,
+Técnico em Eletrotécnica,37,,M,Pardo,1,S,AE
+Técnico em Eletrotécnica,18,,F,Pardo,1,S,AE
+Técnico em Eletrotécnica,29,,M,Pardo,1,S,AE
+Técnico em Eletrotécnica,36,,M,Pardo,1,N,
+Técnico em Eletrotécnica,,,F,Preto,1,S,AE
+Técnico em Eletrotécnica,16,,M,Pardo,1 a 3,N,
+Técnico em Eletrotécnica,22,,M,Pardo,1 a 3,N,
+Técnico em Eletrotécnica,18,2018,M,Pardo,1 a 3,N,
+Técnico em Eletrotécnica,16,,M,Branco,1 a 3,N,
+Técnico em Eletrotécnica,17,2018,M,Branco,1 a 3,N,
+Técnico em Eletrotécnica,18,,M,Branco,3 a 6,N,
+Técnico em Eletrotécnica,,,M,Pardo,1 a 3,S,AE
+Técnico em Eletrotécnica,25,,M,Pardo,1 a 3,N,
+Engenharia Química,18,2018,M,Pardo,3 a 6,N,
+Engenharia Química,21,2015,M,Amarelo,3 a 6,N,
+Engenharia Química,18,2018,M,Branco,1 a 3,S,AE
+Engenharia Química,,2015,M,Branco,1 a 3,S,PE
+Engenharia Química,,2018,M,Pardo,3 a 6,N,
+Engenharia Química,27,,F,Pardo,1,S,AE
+Engenharia Química,19,2018,F,Preto,1 a 3,N,
+Engenharia Química,18,2018,M,Pardo,6 a 9,N,
+Engenharia Química,20,2018,M,Pardo,1 a 3,N,
+Engenharia Química,19,2018,M,Pardo,1 a 3,S,AE
+Engenharia Química,19,2018,F,Pardo,3 a 6,N,
+Engenharia Química,24,2018,M,Pardo,3 a 6,S,AE
+Engenharia Química,21,2015,F,Branco,3 a 6,N,
+Engenharia Química,20,2018,M,Branco,1,S,AE
+Engenharia Química,18,2018,M,Preto,3 a 6,S,AE
+Engenharia Química,19,2018,F,Branco,3 a 6,N,
+Engenharia Química,19,2017,F,Branco,3 a 6,N,
+Engenharia Química,18,2018,M,Branco,3 a 6,N,
+Engenharia Química,18,2018,M,Branco,6 a 9,N,
+Engenharia Química,20,2017,F,Pardo,3 a 6,N,
+Técnico em Química,16,2017,F,Pardo,1 a 3,S,AE
+Técnico em Química,16,2017,F,Pardo,1,S,AE
+Técnico em Química,17,2017,M,Pardo,mais de 9,N,
+Técnico em Química,16,2017,F,Branco,3 a 6,S,AE
+Técnico em Química,17,2017,F,Branco,3 a 6,S,AE
+Técnico em Química,16,2017,M,Pardo,1 a 3,S,AE
+Técnico em Química,16,2017,F,Branco,3 a 6,N,
+Técnico em Química,21,,M,Pardo,1 a 3,N,
+Técnico em Segurança do Trabalho,,,M,Pardo,1 a 3,N,
+Técnico em Segurança do Trabalho,24,,M,Preto,3 a 6,N,
+Técnico em Segurança do Trabalho,,,F,Preto,1 a 3,N,
+Técnico em Segurança do Trabalho,21,,F,Pardo,1 a 3,N,
+Técnico em Segurança do Trabalho,28,2018,F,Preto,1 a 3,N,
+Técnico em Segurança do Trabalho,17,,F,Preto,1,N,
+Técnico em Segurança do Trabalho,22,,F,Pardo,1 a 3,N,
+Técnico em Segurança do Trabalho,35,2018,F,Pardo,1,N,
+Técnico em Segurança do Trabalho,19,,F,Amarelo,1 a 3,N,
+Técnico em Segurança do Trabalho,18,,F,Amarelo,1 a 3,N,
+Técnico em Segurança do Trabalho,18,,M,Pardo,1 a 3,N,
+Técnico em Segurança do Trabalho,24,,F,Pardo,1 a 3,N,
+Técnico em Segurança do Trabalho,,,M,Pardo,1,N,
+Técnico em Segurança do Trabalho,17,,F,Amarelo,1 a 3,N,
+Técnico em Segurança do Trabalho,21,,M,Pardo,6 a 9,N,
+Técnico em Segurança do Trabalho,43,,F,Branco,1 a 3,N,
+Engenharia Elétrica,21,2018,F,Branco,3 a 6,N,
+Engenharia Elétrica,,2018,M,Pardo,3 a 6,S,AE
+Técnico em Informática,,2018,M,Pardo,1 a 3,S,AE
+Técnico em Informática,,2017,M,Pardo,3 a 6,N,
+Técnico em Eletrotécnica,17,,M,Pardo,1 a 3,S,AE
+Técnico em Eletrotécnica,26,,M,Pardo,1 a 3,N,
+Técnico em Eletrotécnica,18,,M,Preto,mais de 9,N,
